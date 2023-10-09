@@ -149,7 +149,7 @@ class AboutJobItem extends Component {
             <h1>Skills</h1>
             <ul className="ul-job-details-container">
               {skills.map(eachItem => (
-                <li className="li-job-details-container">
+                <li className="li-job-details-container" key={eachItem.name}>
                   <img
                     src={eachItem.imageUrl}
                     alt={eachItem.name}
