@@ -8,7 +8,6 @@ import NotFound from './components/NotFound'
 import AllJobs from './components/AllJobs'
 import AboutJobItem from './components/AboutJobItem'
 import ApplicationForm from './components/ApplicationForm'
-import ApplicationSuccess from './components/ApplicationSuccess'
 
 import CreateContext from './Context/CreatContext'
 
@@ -38,11 +37,6 @@ class App extends Component {
           <Route exact path="/jobs" component={AllJobs} />
           <Route exact path="/jobs/:id" component={AboutJobItem} />
           <Route exact path="/application-form" component={ApplicationForm} />
-          <Route
-            exact
-            path="/application-success"
-            component={ApplicationSuccess}
-          />
 
           <Route path="/not-found" component={NotFound} />
           <Redirect to="not-found" />

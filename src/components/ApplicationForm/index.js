@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 
 import {BiUpload} from 'react-icons/bi'
 
@@ -82,7 +81,7 @@ class ApplicationForm extends Component {
           />
           <div className="upload-box-container">
             <BiUpload className="upload-icon" />
-            <p className="upload-cover-desc">Upload cover image</p>
+            <p className="upload-cover-desc">Upload Resume</p>
             <p className="upload-cover-details">
               16:9 ratio is recommended. Max image size 1mb
             </p>
@@ -95,18 +94,6 @@ class ApplicationForm extends Component {
     )
   }
 
-  renderApplicationDetails = () => {
-    const {name, email, coverLetter} = this.state
-
-    return (
-      <div className="details-view-container">
-        <h1>{name}</h1>
-        <p>{email}</p>
-        <p>{coverLetter}</p>
-      </div>
-    )
-  }
-
   renderSubmit = () => (
     <CreateContext.Consumer>
       {value => {
@@ -115,21 +102,39 @@ class ApplicationForm extends Component {
         const onClickSubmitBtn = () => {
           toggleSubmit()
         }
+        const {name, email, coverLetter} = this.state
 
         return (
           <>
             {submit ? (
-              <button
-                type="button"
-                className="submit-btn"
-                onClick={onClickSubmitBtn}
-              >
-                Submit
-              </button>
+              <div className="submit-container">
+                <div className="details-view-container">
+                  <p>Name: {name}</p>
+                  <p>Email: {email}</p>
+                  <p>Cover Letter:</p>
+                  <p>{coverLetter}</p>
+                </div>
+                <button
+                  type="button"
+                  className="submit-btn"
+                  onClick={onClickSubmitBtn}
+                >
+                  Submit
+                </button>
+              </div>
             ) : (
-              <Link to="/application-success" className="link-check">
-                Check out
-              </Link>
+              <div>
+                <div className="application-success-container">
+                  <img
+                    src="https://res.cloudinary.com/dakmxu3dl/image/upload/v1689438440/VectorgreenTick_ooyohn.png"
+                    alt="order success"
+                    className="green-tick"
+                  />
+                  <p className="application-success-desc">
+                    Application Successful
+                  </p>
+                </div>
+              </div>
             )}
           </>
         )
@@ -144,11 +149,8 @@ class ApplicationForm extends Component {
 
         <div className="application-form-container">
           <h1 className="application-form-hd">Application Form</h1>
-          <div className="application-details-container">
-            {this.renderApplicationForm()}
-            <div>{this.renderApplicationDetails()}</div>
-          </div>
-          {this.renderSubmit()}
+          <div>{this.renderApplicationForm()}</div>
+          <div>{this.renderSubmit()}</div>
         </div>
       </>
     )

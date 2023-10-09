@@ -280,7 +280,7 @@ class AllJobs extends Component {
       {employmentTypesList.map(eachItem => (
         <li className="li-container" key={eachItem.employmentTypeId}>
           <input
-            className="input"
+            className="job-type-input"
             id={eachItem.employmentTypeId}
             type="checkbox"
             onChange={this.onGetInputOption}
@@ -298,7 +298,7 @@ class AllJobs extends Component {
       {salaryRangesList.map(eachItem => (
         <li className="li-container" key={eachItem.salaryRangeId}>
           <input
-            className="radio"
+            className="radio-input"
             id={eachItem.salaryRangeId}
             type="radio"
             name="option"

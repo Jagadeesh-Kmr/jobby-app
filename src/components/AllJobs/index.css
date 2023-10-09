@@ -61,7 +61,7 @@
   margin-bottom: 10px;
 }
 
-.input {
+.job-type-input {
   width: 18px;
   height: 18px;
   margin-right: 10px;
@@ -72,7 +72,7 @@
   font-size: 20px;
 }
 
-.radio {
+.radio-input {
   width: 18px;
   height: 18px;
   margin-right: 10px;
