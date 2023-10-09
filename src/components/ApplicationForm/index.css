@@ -1,0 +1,15 @@
+.application-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #272829;
+  height: 90vh;
+}
+
+.application-form-hd {
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: 700;
+  color: #3a5cf1;
+}
