@@ -12,6 +12,46 @@ const Home = props => {
     <>
       <Header />
       <div className="home-container">
+        <div className="home-content">
+          <h1 className="home-heading">
+            Find The Job That <br />
+            Fits Your Life
+          </h1>
+          <img
+            src="https://www.signitysolutions.com/hubfs/raw_assets/public/signitysolutions/site-import/images/services/job-portal/banner.png"
+            alt="job img"
+            className="home-mobile-img"
+          />
+          <p className="home-description">
+            Millions of people are searching for jobs, salary information,
+            company reviews. Find the job that fits your abilities and
+            potential.
+          </p>
+          <Link to="/jobs">
+            <button
+              type="button"
+              className="find-jobs-button"
+              onClick={onRedirectToJobs}
+            >
+              Find Jobs
+            </button>
+          </Link>
+        </div>
+        <img
+          src="https://www.signitysolutions.com/hubfs/raw_assets/public/signitysolutions/site-import/images/services/job-portal/banner.png"
+          alt="clothes that get you noticed"
+          className="home-desktop-img"
+        />
+      </div>
+    </>
+  )
+}
+
+export default Home
+
+/*
+<Header />
+      <div className="home-container">
         <h1 className="home-heading">
           Find The Job That <br />
           Fits Your Life
@@ -30,8 +70,4 @@ const Home = props => {
           </button>
         </Link>
       </div>
-    </>
-  )
-}
-
-export default Home
+*/

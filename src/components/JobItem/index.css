@@ -53,6 +53,8 @@
 .location-package-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .location-job-type-container {
@@ -76,7 +78,7 @@
 }
 
 .job-type {
-  margin-top: 0px;
+  margin-top: 60px;
 }
 
 .package {
@@ -94,5 +96,29 @@
 
   .title-heading {
     font-size: 25px;
+  }
+
+  .company-heading {
+    font-size: 21px;
+  }
+
+  .location-package-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .location-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .package {
+    width: 80px;
+    text-align: center;
   }
 }

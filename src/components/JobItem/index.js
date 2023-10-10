@@ -36,17 +36,15 @@ const JobItem = props => {
               </div>
             </div>
             <div className="location-package-container">
-              <div className="location-job-type-container">
-                <div className="location-icon-container">
-                  <MdLocationOn className="location-icon" />
-                  <p className="location">{location}</p>
-                </div>
-                <div className="employment-type-container">
-                  <p className="job-type">{employmentType}</p>
-                </div>
+              <div className="location-icon-container">
+                <MdLocationOn className="location-icon" />
+                <p className="location">{location}</p>
               </div>
-              <div>
-                <p className="package">{packagePerAnnum}</p>
+              <div className="job-type">
+                <p>{employmentType}</p>
+              </div>
+              <div className="package">
+                <p>{packagePerAnnum}</p>
               </div>
             </div>
           </div>

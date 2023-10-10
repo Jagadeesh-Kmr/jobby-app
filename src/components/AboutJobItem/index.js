@@ -130,8 +130,8 @@ class AboutJobItem extends Component {
                   <div className="employment-type-icon-container">
                     <p className="employment-type">{employmentType}</p>
                   </div>
-                  <div className="package-container">
-                    <p className="package">{packagePerAnnum}</p>
+                  <div className="package">
+                    <p>{packagePerAnnum}</p>
                   </div>
                 </div>
               </div>
@@ -146,7 +146,7 @@ class AboutJobItem extends Component {
               </div>
               <p className="description-para">{jobDescription}</p>
             </div>
-            <h1>Skills</h1>
+            <h1 className="skills">Skills</h1>
             <ul className="ul-job-details-container">
               {skills.map(eachItem => (
                 <li className="li-job-details-container" key={eachItem.name}>
@@ -155,13 +155,13 @@ class AboutJobItem extends Component {
                     alt={eachItem.name}
                     className="skill-img"
                   />
-                  <p>{eachItem.name}</p>
+                  <p className="skills-name">{eachItem.name}</p>
                 </li>
               ))}
             </ul>
             <div className="company-life-img-container">
               <div className="life-heading-para-container">
-                <h1>Life at Company</h1>
+                <h1 className="life-at-company">Life at Company</h1>
                 <p>{lifeAtCompany.description}</p>
               </div>
               <img

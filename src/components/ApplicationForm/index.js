@@ -86,9 +86,11 @@ class ApplicationForm extends Component {
               16:9 ratio is recommended. Max image size 1mb
             </p>
           </div>
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
+          <div className="mb-submit-btn">
+            <button type="submit" className="submit-button ">
+              Submit
+            </button>
+          </div>
         </form>
       </>
     )
@@ -112,7 +114,7 @@ class ApplicationForm extends Component {
                   <p>Name: {name}</p>
                   <p>Email: {email}</p>
                   <p>Cover Letter:</p>
-                  <p>{coverLetter}</p>
+                  <p className="cover-letter-desc">{coverLetter}</p>
                 </div>
                 <button
                   type="button"

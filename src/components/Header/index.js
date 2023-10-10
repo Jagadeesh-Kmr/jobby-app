@@ -1,4 +1,7 @@
 import {Link, withRouter} from 'react-router-dom'
+
+import {RiFileSearchLine} from 'react-icons/ri'
+
 import Cookies from 'js-cookie'
 import './index.css'
 
@@ -12,27 +15,79 @@ const Header = props => {
   }
 
   return (
-    <nav className="nav-container">
-      <ul className="header-ul-container">
-        <li className="logo-container">
-          <Link className="link" to="/">
-            <img src={websiteLogo} alt="website logo" className="logo" />
+    <nav className="nav-header">
+      <div className="nav-content">
+        <div className="nav-bar-mobile-logo-container">
+          <Link to="/">
+            <img
+              className="website-logo"
+              src={websiteLogo}
+              alt="website logo"
+            />
           </Link>
-        </li>
-        <li className="home-jobs-container">
-          <Link className="link" to="/">
-            <h1 className="nav-text">Home</h1>
+
+          <button
+            type="button"
+            className="nav-mobile-btn"
+            onClick={onClickLogout}
+          >
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
+              alt="nav logout"
+              className="nav-bar-img"
+            />
+          </button>
+        </div>
+
+        <div className="nav-bar-large-container">
+          <Link to="/">
+            <img
+              className="website-logo"
+              src={websiteLogo}
+              alt="website logo"
+            />
           </Link>
-          <Link className="link" to="/jobs">
-            <h1 className="nav-text">Jobs</h1>
-          </Link>
-        </li>
-        <li>
-          <button type="button" className="btn-logout" onClick={onClickLogout}>
+          <ul className="nav-menu">
+            <li className="nav-menu-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+
+            <li className="nav-menu-item">
+              <Link to="/jobs" className="nav-link">
+                Jobs
+              </Link>
+            </li>
+          </ul>
+          <button
+            type="button"
+            className="logout-desktop-btn"
+            onClick={onClickLogout}
+          >
             Logout
           </button>
-        </li>
-      </ul>
+        </div>
+      </div>
+      <div className="nav-menu-mobile">
+        <ul className="nav-menu-list-mobile">
+          <li className="nav-menu-item-mobile">
+            <Link to="/" className="nav-link">
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
+                alt="nav home"
+                className="nav-bar-img"
+              />
+            </Link>
+          </li>
+
+          <li className="nav-menu-item-mobile">
+            <Link to="/jobs" className="nav-link">
+              <RiFileSearchLine className="nav-bar-icon" />
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
