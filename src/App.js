@@ -6,6 +6,7 @@ import LoginForm from './components/LoginForm'
 import Home from './components/Home'
 import NotFound from './components/NotFound'
 import AllJobs from './components/AllJobs'
+import ProtectedRoute from './components/ProtectedRoute'
 import AboutJobItem from './components/AboutJobItem'
 import ApplicationForm from './components/ApplicationForm'
 
@@ -33,10 +34,14 @@ class App extends Component {
       >
         <Switch>
           <Route exact path="/login" component={LoginForm} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/jobs" component={AllJobs} />
-          <Route exact path="/jobs/:id" component={AboutJobItem} />
-          <Route exact path="/application-form" component={ApplicationForm} />
+          <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/jobs" component={AllJobs} />
+          <ProtectedRoute exact path="/jobs/:id" component={AboutJobItem} />
+          <ProtectedRoute
+            exact
+            path="/application-form"
+            component={ApplicationForm}
+          />
 
           <Route path="/not-found" component={NotFound} />
           <Redirect to="not-found" />
