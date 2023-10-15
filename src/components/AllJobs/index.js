@@ -208,8 +208,6 @@ class AllJobs extends Component {
         return this.onGetProfileView()
       case apiStatusConstants.failure:
         return this.onGetProfileFailureView()
-      case apiStatusConstants.inProgress:
-        return this.renderLoadingView()
       default:
         return null
     }

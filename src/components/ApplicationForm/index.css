@@ -132,7 +132,7 @@
   color: #ffffff;
   margin-bottom: 30px;
   width: 580px;
-  height: 360px;
+  min-height: 360px;
 }
 
 .submit-btn {
@@ -279,7 +279,7 @@
     flex-direction: column;
     border: 2px solid #ccd8e4;
     width: 280px;
-    height: 470px;
+    min-height: 470px;
     margin-top: 30px;
     margin-bottom: 60px;
     padding-top: 10px;
@@ -290,6 +290,7 @@
 
   .cover-letter-desc {
     font-size: 11px;
+    min-width: 190px;
   }
 
   .application-success-container {

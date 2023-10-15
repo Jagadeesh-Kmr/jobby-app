@@ -18,6 +18,12 @@
   margin-bottom: 0px;
 }
 
+.company-heading {
+  font-size: 30px;
+  margin-bottom: 11px;
+  margin-top: 0px;
+}
+
 .company-logo {
   width: 80px;
   height: 80px;
@@ -54,7 +60,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
 }
 
 .location-job-type-container {
@@ -120,5 +125,10 @@
   .package {
     width: 80px;
     text-align: center;
+  }
+
+  .job-type {
+    width: 160px;
+    margin-left: 21px;
   }
 }

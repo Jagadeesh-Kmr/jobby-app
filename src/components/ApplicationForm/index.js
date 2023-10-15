@@ -114,7 +114,9 @@ class ApplicationForm extends Component {
                   <p>Name: {name}</p>
                   <p>Email: {email}</p>
                   <p>Cover Letter:</p>
-                  <p className="cover-letter-desc">{coverLetter}</p>
+                  <div className="cover-letter-desc">
+                    <p>{coverLetter}</p>
+                  </div>
                 </div>
                 <button
                   type="button"
