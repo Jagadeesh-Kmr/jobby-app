@@ -16,6 +16,7 @@ class ApplicationForm extends Component {
     email: '',
     coverLetterInput: '',
     coverLetter: '',
+    requiredDetailsMg: '',
   }
 
   onClickNameInput = event => {
@@ -30,22 +31,42 @@ class ApplicationForm extends Component {
     this.setState({coverLetterInput: event.target.value})
   }
 
+  renderRequiredDetails = () => {
+    this.setState({
+      requiredDetailsMg: '*Required Details',
+    })
+  }
+
   onSubmitForm = event => {
     event.preventDefault()
     const {nameInput, emailInput, coverLetterInput} = this.state
 
-    this.setState({
-      name: nameInput,
-      nameInput: '',
-      email: emailInput,
-      emailInput: '',
-      coverLetter: coverLetterInput,
-      coverLetterInput: '',
-    })
+    if (
+      nameInput.length === 0 ||
+      emailInput.length === 0 ||
+      coverLetterInput.length === 0
+    ) {
+      this.renderRequiredDetails()
+    } else {
+      this.setState({
+        name: nameInput,
+        nameInput: '',
+        email: emailInput,
+        emailInput: '',
+        coverLetter: coverLetterInput,
+        coverLetterInput: '',
+        requiredDetailsMg: '',
+      })
+    }
   }
 
   renderApplicationForm = () => {
-    const {nameInput, emailInput, coverLetterInput} = this.state
+    const {
+      nameInput,
+      emailInput,
+      coverLetterInput,
+      requiredDetailsMg,
+    } = this.state
 
     return (
       <>
@@ -64,7 +85,7 @@ class ApplicationForm extends Component {
             Email
           </label>
           <input
-            type="text"
+            type="email"
             id="email"
             className="input"
             value={emailInput}
@@ -85,6 +106,9 @@ class ApplicationForm extends Component {
             <p className="upload-cover-details">
               16:9 ratio is recommended. Max image size 1mb
             </p>
+          </div>
+          <div className="required-details">
+            <p>{requiredDetailsMg}</p>
           </div>
           <div className="mb-submit-btn">
             <button type="submit" className="submit-button ">

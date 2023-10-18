@@ -224,6 +224,10 @@
     margin-right: 10px;
   }
 
+  .lpa {
+    width: 50px;
+  }
+
   .location-package-container {
     display: flex;
     justify-content: space-between;
@@ -231,17 +235,31 @@
     width: 100%;
   }
 
+  .location-job-type-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+  }
+
   .package {
     padding-left: 40px;
-    width: 200px;
   }
 
   .employment-type-icon-container {
+    width: 190px;
     margin-left: 30px;
   }
 
   .title-heading {
     font-size: 21px;
+  }
+
+  .description-visit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .description-job-heading {

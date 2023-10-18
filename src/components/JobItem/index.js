@@ -44,7 +44,7 @@ const JobItem = props => {
                 <p>{employmentType}</p>
               </div>
               <div className="package">
-                <p>{packagePerAnnum}</p>
+                <p className="lpa">{packagePerAnnum}</p>
               </div>
             </div>
           </div>

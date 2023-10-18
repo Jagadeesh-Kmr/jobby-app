@@ -131,7 +131,7 @@ class AboutJobItem extends Component {
                     <p className="employment-type">{employmentType}</p>
                   </div>
                   <div className="package">
-                    <p>{packagePerAnnum}</p>
+                    <p className="lpa">{packagePerAnnum}</p>
                   </div>
                 </div>
               </div>

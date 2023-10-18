@@ -49,6 +49,10 @@
   margin-left: 5px;
 }
 
+.lpa {
+  width: 10px;
+}
+
 .rating-text {
   color: #ffffff;
   font-weight: bold;
@@ -109,26 +113,24 @@
 
   .location-package-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     font-size: 15px;
-    width: 100%;
   }
 
   .location-icon-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-right: 20px;
   }
 
   .package {
-    width: 80px;
-    text-align: center;
+    width: 70px;
+    margin-right: 20px;
   }
 
   .job-type {
-    width: 160px;
-    margin-left: 21px;
+    width: 300px;
   }
 }
