@@ -50,7 +50,7 @@
 }
 
 .lpa {
-  width: 10px;
+  width: 70px;
 }
 
 .rating-text {
@@ -64,6 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 95%;
 }
 
 .location-job-type-container {
