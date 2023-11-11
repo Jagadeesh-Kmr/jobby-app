@@ -29,5 +29,5 @@ Authorization, Authentication
     - After clicking "Click to Apply" button, An Application will be displayd with Name, Email and Cover Letter.
 
  - Application Form
-    - After entering details and clicking on "Submit" button in the form, Entered details will be displayed below.
+    - After entering form details and clicking on "Submit" button, Entered details will be displayed below.
     - After clicking on the below "Submit" button "Application Successful" message will be displayed.
